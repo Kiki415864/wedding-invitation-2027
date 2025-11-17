@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Invitation – 10 November 2027</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset and Global Styles */
+        :root {
+            --color-primary: #8B4513; /* Warm Brown/Sepia for accents (inspired by wood/earth) */
+            --color-secondary: #F5E5D1; /* Light Cream/Ivory for background */
+            --color-text: #333333; /* Dark text for readability */
+            --color-accent: #B8860B; /* Muted Gold for highlights */
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Lato', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-secondary);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center; /* Center all block content within the container */
+        }
+
+        /* Typography */
+        h1 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 3rem;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: var(--color-accent);
+            margin-top: 0;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(139, 69, 19, 0.2); /* Subtle line under date */
+            padding-bottom: 10px;
+            display: inline-block; /* Makes border-bottom only as wide as the text */
+        }
+
+        .section {
+            margin-top: 40px;
+            padding: 30px;
+            background: white; /* Lift content off the cream background */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+        }
+
+        /* Language Toggle Buttons */
+        .lang-toggle {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            margin: 0 8px;
+            cursor: pointer;
+            border: 2px solid var(--color-primary); /* Primary border */
+            background-color: transparent; /* Transparent background */
+            color: var(--color-primary); /* Primary text color */
+            border-radius: 5px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover,
+        .button.active {
+            background-color: var(--color-primary);
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Invitation & RSVP Text */
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding: 0 10px;
+        }
+
+        .section h2 { /* Targeting the RSVP heading */
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin-top: 0;
+            margin-bottom: 20px;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* RSVP Link Styling */
+        .rsvp-link {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 20px;
+            background-color: var(--color-accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px; /* Pill shape for a modern look */
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, transform 0.1s;
+        }
+
+        .rsvp-link:hover {
+            background-color: #A37A09; /* Slightly darker gold on hover */
+            transform: translateY(-1px);
+        }
+
+        /* Dual-Language Content Management */
+        [data-lang] {
+            display: none;
+        }
+
+        /* Small Screen Optimizations */
+        @media (max-width: 500px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.2rem; }
+            p { font-size: 1rem; }
+            .container { padding: 20px 10px; }
+            .section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="lang-toggle">
+        <button class="button" id="en-btn" onclick="switchLang('en')">English</button>
+        <button class="button" id="mm-btn" onclick="switchLang('mm')">မြန်မာ</button>
+    </div>
+
+    <h1 data-lang="en">Jessica & Peter's</h1>
+    <h1 data-lang="mm">ဂျက်စီကာနှင့် ပီတာတို့၏</h1>
+    
+    <h1 data-lang="en">Wedding</h1>
+    <h1 data-lang="mm">မင်္ဂလာဆောင်</h1>
+
+    <h2 data-lang="en">10 November 2027</h2>
+    <h2 data-lang="mm">၁၀ နိုဝင်ဘာ ၂၀၂၇</h2>
+
+    <div class="section">
+        <div data-lang="en" class="content-block">
+            <h2>Invitation</h2>
+            <p>You are warmly invited to celebrate our special day as we begin our new life together. Your presence is the only gift we need.</p>
+            <p>Please confirm your attendance through the RSVP form below.</p>
+        </div>
+
+        <div data-lang="mm" class="content-block">
+            <h2>ဖိတ်ကြားခြင်း</h2>
+            <p>ကျွန်မတို့၏ အထူးနေ့ကို တက်ရောက်ဂုဏ်ယူပေးပါရန် အနူးအညွှတ် ဖိတ်ကြားအပ်ပါတယ်။ အတူတကွ ပျော်ရွှင်စွာ ဆင်နွှဲပေးပါရန် မေတ္တာရပ်ခံအပ်ပါတယ်။</p>
+            <p>RSVP ဖောင်ဖြင့် တက်ရောက်မည်/မတက်ရောက်မည်ကို အတည်ပြုပေးပါရန် လည်း တောင်းဆိုအပ်ပါတယ်။</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div data-lang="en" class="content-block">
+            <h2>RSVP - Response</h2>
+            <p>We kindly ask you to complete the form so we can finalize arrangements for all of our guests.</p>
+            <a href="#" class="rsvp-link">RSVP Form (coming soon)</a>
+        </div>
+
+        <div data-lang="mm" class="content-block">
+            <h2>RSVP - အကြောင်းပြန်ရန်</h2>
+            <p>ဧည့်သည်တော်များအတွက် အဆင်ပြေစေရန် ကျွန်ုပ်တို့ ပြင်ဆင်နိုင်ဖို့ ဖောင်ကို ဖြည့်စွက်ပေးပါရန် မေတ္တာရပ်ခံအပ်ပါတယ်။</p>
+            <a href="#" class="rsvp-link">RSVP ဖောင် (မကြာမီ ရနိုင်ပါမည်)</a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+// Function to switch language and update button styles
+function switchLang(lang) {
+  // 1. Hide all elements and show only the selected language elements
+  document.querySelectorAll("[data-lang]").forEach(el => {
+    el.style.display = (el.getAttribute("data-lang") === lang) ? "block" : "none";
+  });
+
+  // 2. Update button active state
+  document.querySelectorAll(".button").forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  if (lang === 'en') {
+    document.getElementById('en-btn').classList.add('active');
+  } else if (lang === 'mm') {
+    document.getElementById('mm-btn').classList.add('active');
+  }
+}
+
+// Initialize the page in English and set the active button style
+switchLang('en');
+</script>
+
+</body>
+</html>
