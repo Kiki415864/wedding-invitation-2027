@@ -1,214 +1,749 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wedding Invitation – 10 November 2027</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        /* CSS Reset and Global Styles */
-        :root {
-            --color-primary: #8B4513; /* Warm Brown/Sepia for accents (inspired by wood/earth) */
-            --color-secondary: #F5E5D1; /* Light Cream/Ivory for background */
-            --color-text: #333333; /* Dark text for readability */
-            --color-accent: #B8860B; /* Muted Gold for highlights */
-            --font-serif: 'Playfair Display', serif;
-            --font-sans: 'Lato', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <title>Wedding Invitation – Mg Ye Thu Wai & Ma Vung San Nuam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wedding invitation for Mg Ye Thu Wai & Ma Vung San Nuam – 10 November 2027, Sedona Hotel Yangon." />
 
-        body {
-            font-family: var(--font-sans);
-            margin: 0;
-            padding: 0;
-            background-color: var(--color-secondary);
-            color: var(--color-text);
-            line-height: 1.6;
-        }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            text-align: center; /* Center all block content within the container */
-        }
+  <style>
+    :root {
+      --bg-main: #faf4ef;
+      --bg-card: #ffffff;
+      --accent: #e3b8a0;
+      --accent-soft: #f7d8c5;
+      --text-main: #3f3631;
+      --text-muted: #7f6f65;
+      --border-soft: #f0dfd3;
+    }
 
-        /* Typography */
-        h1 {
-            font-family: var(--font-serif);
-            font-weight: 700;
-            font-size: 3rem;
-            color: var(--color-primary);
-            margin-bottom: 0.5rem;
-            letter-spacing: 2px;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        h2 {
-            font-family: var(--font-serif);
-            font-weight: 400;
-            font-size: 1.5rem;
-            color: var(--color-accent);
-            margin-top: 0;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid rgba(139, 69, 19, 0.2); /* Subtle line under date */
-            padding-bottom: 10px;
-            display: inline-block; /* Makes border-bottom only as wide as the text */
-        }
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #fceee4 0, #faf4ef 45%, #f7f0eb 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
 
-        .section {
-            margin-top: 40px;
-            padding: 30px;
-            background: white; /* Lift content off the cream background */
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
-        }
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-        /* Language Toggle Buttons */
-        .lang-toggle {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+    /* Language Toggle Bar */
+    .lang-toggle-bar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(250, 244, 239, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-soft);
+    }
 
-        .button {
-            padding: 10px 20px;
-            margin: 0 8px;
-            cursor: pointer;
-            border: 2px solid var(--color-primary); /* Primary border */
-            background-color: transparent; /* Transparent background */
-            color: var(--color-primary); /* Primary text color */
-            border-radius: 5px;
-            font-weight: 700;
-            transition: all 0.3s ease;
-        }
+    .lang-toggle-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0.6rem 1.25rem;
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+    }
 
-        .button:hover,
-        .button.active {
-            background-color: var(--color-primary);
-            color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
+    .button {
+      padding: 0.45rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent-soft);
+      font-size: 0.85rem;
+      background: #fff7f2;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
 
-        /* Invitation & RSVP Text */
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            padding: 0 10px;
-        }
+    .button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
 
-        .section h2 { /* Targeting the RSVP heading */
-            font-size: 2rem;
-            color: var(--color-primary);
-            margin-top: 0;
-            margin-bottom: 20px;
-            border: none;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
+    .button.active {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+      font-weight: 600;
+    }
 
-        /* RSVP Link Styling */
-        .rsvp-link {
-            display: inline-block;
-            padding: 12px 25px;
-            margin-top: 20px;
-            background-color: var(--color-accent);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px; /* Pill shape for a modern look */
-            font-weight: 700;
-            letter-spacing: 1px;
-            transition: background-color 0.3s ease, transform 0.1s;
-        }
+    /* Hero Section */
+    .hero {
+      max-width: 980px;
+      margin: 1.5rem auto 1.75rem auto;
+      padding: 1.75rem 1.25rem 2.25rem 1.25rem;
+      background: linear-gradient(135deg, #fdf4ee, #f9e2d1);
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(174, 132, 104, 0.18);
+      position: relative;
+      overflow: hidden;
+    }
 
-        .rsvp-link:hover {
-            background-color: #A37A09; /* Slightly darker gold on hover */
-            transform: translateY(-1px);
-        }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background-image:
+        radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.35) 0, transparent 55%),
+        radial-gradient(circle at 100% 0, rgba(255, 255, 255, 0.3) 0, transparent 55%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
 
-        /* Dual-Language Content Management */
-        [data-lang] {
-            display: none;
-        }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 1.5rem;
+      align-items: center;
+    }
 
-        /* Small Screen Optimizations */
-        @media (max-width: 500px) {
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 1.2rem; }
-            p { font-size: 1rem; }
-            .container { padding: 20px 10px; }
-            .section { padding: 20px; }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+
+    .hero-main {
+      padding-right: 1rem;
+    }
+
+    .hero-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-names {
+      font-family: "Playfair Display", serif;
+      font-size: 2.4rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-names-sub {
+      font-family: "Playfair Display", serif;
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-tagline {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-date {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-location {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+    }
+
+    .hero-aside {
+      border-radius: 18px;
+      padding: 1.25rem 1.15rem;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 6px 25px rgba(164, 124, 97, 0.16);
+      backdrop-filter: blur(6px);
+    }
+
+    .countdown-title {
+      font-size: 0.9rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+      text-align: center;
+    }
+
+    .countdown-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .countdown-item {
+      flex: 1;
+      min-width: 55px;
+      text-align: center;
+      background: #fff7f3;
+      border-radius: 12px;
+      padding: 0.45rem 0.3rem;
+      border: 1px solid #f1ded3;
+    }
+
+    .countdown-value {
+      font-size: 1.15rem;
+      font-weight: 600;
+      font-family: "Playfair Display", serif;
+    }
+
+    .countdown-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+    }
+
+    .hero-note {
+      font-size: 0.85rem;
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.65rem 1.6rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(160, 104, 77, 0.28);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 28px rgba(160, 104, 77, 0.35);
+    }
+
+    .btn-primary span.icon {
+      font-size: 1rem;
+    }
+
+    /* Generic Sections */
+    .section {
+      max-width: 980px;
+      margin: 0 auto 1.5rem auto;
+      padding: 1.5rem 1.25rem;
+      background: var(--bg-card);
+      border-radius: 20px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .story-text {
+      font-size: 0.98rem;
+      color: var(--text-main);
+      margin-bottom: 0.8rem;
+    }
+
+    .story-text + .story-text {
+      margin-top: 0.1rem;
+    }
+
+    /* Details & Timeline */
+    .details-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 768px) {
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .details-block h3 {
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+    }
+
+    .details-block p,
+    .details-block ul {
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    .details-block ul {
+      list-style: none;
+      margin-top: 0.4rem;
+    }
+
+    .details-block li::before {
+      content: "•";
+      margin-right: 0.4rem;
+      color: var(--accent);
+    }
+
+    .muted {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Venue & Map */
+    .venue-info {
+      margin-bottom: 1rem;
+      font-size: 0.96rem;
+    }
+
+    .venue-info strong {
+      font-weight: 600;
+    }
+
+    .venue-note {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+
+    .map-container {
+      margin-top: 0.9rem;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #eedfd2;
+      box-shadow: 0 10px 30px rgba(173, 132, 104, 0.2);
+    }
+
+    .map-container iframe {
+      display: block;
+      width: 100%;
+      height: 280px;
+      border: none;
+    }
+
+    /* RSVP Section */
+    .rsvp-center {
+      text-align: center;
+    }
+
+    .rsvp-text {
+      font-size: 0.96rem;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 2.5rem 1.25rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    footer .heart {
+      color: #e08a8a;
+    }
+
+    /* Language handling: default hidden, JS will show proper language */
+    [data-lang] {
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="page">
 
-<div class="container">
-
-    <div class="lang-toggle">
+    <!-- Language Toggle -->
+    <div class="lang-toggle-bar">
+      <div class="lang-toggle-inner">
         <button class="button" id="en-btn" onclick="switchLang('en')">English</button>
         <button class="button" id="mm-btn" onclick="switchLang('mm')">မြန်မာ</button>
+      </div>
     </div>
 
-    <h1 data-lang="en">Mg Ye Thu Wai and Ma Vung San Nuam</h1>
-    <h1 data-lang="mm">မောင်ရဲသုဝေ နှင့် မဝုန်ဆမ်းနွမ်</h1>
-    
-    <h1 data-lang="en">Wedding</h1>
-    <h1 data-lang="mm">မင်္ဂလာဆောင်</h1>
+    <!-- Hero -->
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-main">
+          <div class="hero-eyebrow" data-lang="en">Wedding Invitation</div>
+          <div class="hero-eyebrow" data-lang="mm">မင်္ဂလာဆောင် ဖိတ်ကြားလွှာ</div>
 
-    <h2 data-lang="en">10 November 2027</h2>
-    <h2 data-lang="mm">၁၀ နိုဝင်ဘာ ၂၀၂၇</h2>
+          <h1 class="hero-names" data-lang="en">Mg Ye Thu Wai &amp; Ma Vung San Nuam</h1>
+          <h1 class="hero-names" data-lang="mm">မောင်ရဲသုဝေ နှင့် မဝုန်ဆမ်းနွမ်</h1>
 
-    <div class="section">
-        <div data-lang="en" class="content-block">
-            <h2>Invitation</h2>
-            <p>You are warmly invited to celebrate our special day as we begin our new life together. Your presence is the only gift we need.</p>
-            <p>Please confirm your attendance through the RSVP form below.</p>
+          <div class="hero-names-sub" data-lang="en">Together with their families</div>
+          <div class="hero-names-sub" data-lang="mm">မိဘမောင်နှမ မိတ်ဆွေများနှင့်အတူ</div>
+
+          <p class="hero-tagline" data-lang="en">
+            joyfully invite you to share in the celebration of their marriage.
+          </p>
+          <p class="hero-tagline" data-lang="mm">
+            မိမိတို့ မင်္ဂလာပွဲသို့ လာရောက်အလှပဲဖြင့် တက်ရောက်အားဖြည့်ပေးရန် အன்பဖြင့် ဖိတ်ကြားအပ်ပါသည်။
+          </p>
+
+          <p class="hero-date" data-lang="en">
+            10 November 2027 · Sedona Hotel Yangon
+          </p>
+          <p class="hero-date" data-lang="mm">
+            ၁၀ နိုဝင်ဘာ ၂၀၂၇ · ဆီဒိုနာ ဟိုတယ် ရန်ကုန်
+          </p>
+
+          <p class="hero-location" data-lang="en">
+            Ceremony and reception to be held at Sedona Hotel Yangon, Myanmar.
+          </p>
+          <p class="hero-location" data-lang="mm">
+            မင်္ဂလာအခမ်းအနားနှင့် ဧည့်ခံပွဲကို ဆီဒိုနာ ဟိုတယ် ရန်ကုန်တွင် ကျင်းပမည်ဖြစ်ပါသည်။
+          </p>
         </div>
 
-        <div data-lang="mm" class="content-block">
-            <h2>ဖိတ်ကြားခြင်း</h2>
-            <p>ကျွန်မတို့၏ အထူးနေ့ကို တက်ရောက်ဂုဏ်ယူပေးပါရန် အနူးအညွှတ် ဖိတ်ကြားအပ်ပါတယ်။ အတူတကွ ပျော်ရွှင်စွာ ဆင်နွှဲပေးပါရန် မေတ္တာရပ်ခံအပ်ပါတယ်။</p>
-            <p>RSVP ဖောင်ဖြင့် တက်ရောက်မည်/မတက်ရောက်မည်ကို အတည်ပြုပေးပါရန် လည်း တောင်းဆိုအပ်ပါတယ်။</p>
+        <aside class="hero-aside">
+          <div class="countdown-title" data-lang="en">Countdown to the big day</div>
+          <div class="countdown-title" data-lang="mm">အထူးနေ့သို့ ဘယ်လောက်ကျန်လဲ</div>
+
+          <div class="countdown-row" id="countdown">
+            <div class="countdown-item">
+              <div class="countdown-value" id="days">–</div>
+              <div class="countdown-label" data-lang="en">Days</div>
+              <div class="countdown-label" data-lang="mm">ရက်</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-value" id="hours">–</div>
+              <div class="countdown-label" data-lang="en">Hours</div>
+              <div class="countdown-label" data-lang="mm">နာရီ</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-value" id="minutes">–</div>
+              <div class="countdown-label" data-lang="en">Minutes</div>
+              <div class="countdown-label" data-lang="mm">မိနစ်</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-value" id="seconds">–</div>
+              <div class="countdown-label" data-lang="en">Seconds</div>
+              <div class="countdown-label" data-lang="mm">စက္ကန့်</div>
+            </div>
+          </div>
+
+          <p class="hero-note" data-lang="en">
+            We kindly ask you to RSVP so we can prepare comfortably for all our guests.
+          </p>
+          <p class="hero-note" data-lang="mm">
+            ဧည့်သည်တော်များအားလုံးအတွက် အဆင်ပြေစွာ ပြင်ဆင်နိုင်ရန် RSVP ဖြင့် အတည်ပြုပေးပါရန် မေတ္တာရပ်ခံအပ်ပါသည်။
+          </p>
+
+          <div class="hero-cta">
+            <a href="#rsvp" class="btn-primary">
+              <span data-lang="en">RSVP Response</span>
+              <span data-lang="mm">RSVP အကြောင်းပြန်ရန်</span>
+              <span class="icon">✉️</span>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <!-- Our Story -->
+    <section class="section" id="our-story">
+      <div class="section-header">
+        <h2 class="section-title" data-lang="en">Our Story</h2>
+        <h2 class="section-title" data-lang="mm">ကျွန်ုပ်တို့ရဲ့ ဇာတ်လမ်း</h2>
+
+        <p class="section-subtitle" data-lang="en">
+          A simple beginning that grew into a lifetime journey.
+        </p>
+        <p class="section-subtitle" data-lang="mm">
+          ရိုးရှင်းသည့် အစတစ်ခုက ကျက်သရေပြည့် အချစ်လမ်းကြောင်းတစ်သွးဖြစ်လာပြန်သည်။
+        </p>
+      </div>
+
+      <p class="story-text" data-lang="en">
+        It all began with a small encounter and gentle conversations that slowly turned into
+        something deeper. Over time, shared laughter, quiet support, and countless little
+        moments became the foundation of a life we now look forward to building together.
+      </p>
+      <p class="story-text" data-lang="en">
+        As we take this next step, we feel incredibly grateful to be surrounded by family and
+        friends who have encouraged, guided, and loved us along the way.
+      </p>
+
+      <p class="story-text" data-lang="mm">
+        ကျွန်ုပ်တို့၏ ဇာတ်လမ်းသည် မမျှော်လင့်ထားသည့် အခါအခါ၊ စကားလွှဲပြောမှု သေးသေးလေးတွေကြားကနေ
+        တဖြည်းဖြည်းနက်ရှိုင်းလာတာဖြစ်ပါတယ်။ အချိန်နဲ့အမျှ ပျော်ရွှင်ရယ်မောမှုတို့၊ တိတ်တဆိတ် လက်တွဲပံ့ပိုးမှုတို့နဲ့
+        နေ့စဉ်လေးလေးများပေါင်းစိတ်က ယနေ့ အတူတကွ ဆောက်ရှေ့သွားမယ့် ဘဝတစ်ခုရဲ့ မူလတည်ခင်းဖြစ်လာခဲ့ပါတယ်။
+      </p>
+      <p class="story-text" data-lang="mm">
+        ယခုအခန်းသစ်ကို စတင်နေစဉ် မိဘမောင်နှမများနှင့် မိတ်ဆွေသဂျူများက ပေးအပ်ခဲ့ကြတဲ့ ခိတ္တယ်မေတ္တာနဲ့
+        လက်တွဲအားပေးမှုတွေကြောင့် အထူးကျေးဇူးခံစားမိနေပါတယ်။
+      </p>
+    </section>
+
+    <!-- Wedding Day Details -->
+    <section class="section" id="details">
+      <div class="section-header">
+        <h2 class="section-title" data-lang="en">Wedding Day Details</h2>
+        <h2 class="section-title" data-lang="mm">မင်္ဂလာနေ့ အသေးစိတ်</h2>
+      </div>
+
+      <div class="details-grid">
+        <div class="details-block">
+          <h3 data-lang="en">Ceremony &amp; Reception</h3>
+          <h3 data-lang="mm">အခမ်းအနားနှင့် ဧည့်ခံပွဲ</h3>
+
+          <p data-lang="en">
+            <strong>Date:</strong> Wednesday, 10 November 2027<br />
+            <strong>Venue:</strong> Sedona Hotel Yangon, Myanmar
+          </p>
+          <p data-lang="mm">
+            <strong>နေ့စွဲ:</strong> ခေါင်သောကြာ၊ ၁၀ နိုဝင်ဘာ ၂၀၂၇<br />
+            <strong>နေရာ:</strong> ဆီဒိုနာ ဟိုတယ် ရန်ကုန်
+          </p>
+
+          <p class="muted" data-lang="en">
+            Kindly arrive 20–30 minutes before the ceremony begins.
+          </p>
+          <p class="muted" data-lang="mm">
+            အခမ်းအနား စတင်ချိန် မတိုင်ခင် မိနစ် ၂၀ မှ ၃၀ ခန့် ကြိုတင်ရောက်ရှိပေးပါရန် မေတ္တာရပ်ခံအပ်ပါသည်။
+          </p>
         </div>
-    </div>
-    
-    <div class="section">
-        <div data-lang="en" class="content-block">
-            <h2>RSVP - Response</h2>
-            <p>We kindly ask you to complete the form so we can finalize arrangements for all of our guests.</p>
-            <a href="#" class="rsvp-link">RSVP Form (coming soon)</a>
+
+        <div class="details-block">
+          <h3 data-lang="en">Schedule (example)</h3>
+          <h3 data-lang="mm">အချိန်ဇယား (အနမင့်)</h3>
+
+          <ul data-lang="en">
+            <li>1:00 PM – Guest arrival &amp; welcome</li>
+            <li>1:30 PM – Wedding ceremony</li>
+            <li>3:00 PM – Group photos &amp; tea break</li>
+            <li>5:00 PM – Dinner &amp; reception</li>
+          </ul>
+
+          <ul data-lang="mm">
+            <li>1:00 PM – ဧည့်သည် တော်များ လာရောက်ခြင်း</li>
+            <li>1:30 PM – မင်္ဂလာဆောင် အခမ်းအနား</li>
+            <li>3:00 PM – အမှတ်တရ ဓာတ်ပုံရိုက်ခြင်းနှင့် အနားယူခွင့်</li>
+            <li>5:00 PM – ညစာပြင်ဆင်သည့် ဧည့်ခံပွဲ</li>
+          </ul>
+
+          <p class="muted" data-lang="en">
+            Final timings will be confirmed closer to the date.
+          </p>
+          <p class="muted" data-lang="mm">
+            အချိန်ဇယားကို နိုင်နိုင့် နောက်တစ်ကြိမ် ထပ်မံအသေးစိတ် မျှဝေမည်ဖြစ်ပါသည်။
+          </p>
         </div>
+      </div>
+    </section>
 
-        <div data-lang="mm" class="content-block">
-            <h2>RSVP - အကြောင်းပြန်ရန်</h2>
-            <p>ဧည့်သည်တော်များအတွက် အဆင်ပြေစေရန် ကျွန်ုပ်တို့ ပြင်ဆင်နိုင်ဖို့ ဖောင်ကို ဖြည့်စွက်ပေးပါရန် မေတ္တာရပ်ခံအပ်ပါတယ်။</p>
-            <a href="#" class="rsvp-link">RSVP ဖောင် (မကြာမီ ရနိုင်ပါမည်)</a>
-        </div>
-    </div>
+    <!-- Venue & Map -->
+    <section class="section" id="venue">
+      <div class="section-header">
+        <h2 class="section-title" data-lang="en">Venue</h2>
+        <h2 class="section-title" data-lang="mm">ဧည့်ခံနေရာ</h2>
 
-</div>
+        <p class="section-subtitle" data-lang="en">
+          Sedona Hotel Yangon – a special place to celebrate together.
+        </p>
+        <p class="section-subtitle" data-lang="mm">
+          ဆီဒိုနာ ဟိုတယ် ရန်ကုန်တွင် အတူတကွ အထူးနေ့ကို ဆင်နွှဲကြမည်ဖြစ်ပါသည်။
+        </p>
+      </div>
 
-<script>
-// Function to switch language and update button styles
-function switchLang(lang) {
-  // 1. Hide all elements and show only the selected language elements
-  document.querySelectorAll("[data-lang]").forEach(el => {
-    el.style.display = (el.getAttribute("data-lang") === lang) ? "block" : "none";
-  });
+      <div class="venue-info">
+        <p data-lang="en">
+          <strong>Sedona Hotel Yangon</strong><br />
+          No. 1 Kaba Aye Pagoda Road, Yankin Township<br />
+          Yangon, Myanmar
+        </p>
+        <p data-lang="mm">
+          <strong>ဆီဒိုနာ ဟိုတယ် ရန်ကုန်</strong><br />
+          ကမ္ဘာဧရာဓမ္မရောင်ခြည်စေတီကွင်း လမ်း မကြာခင်အနီး<br />
+          ရန်ကင်းမြို့နယ်၊ ရန်ကုန် မြို့
+        </p>
 
-  // 2. Update button active state
-  document.querySelectorAll(".button").forEach(btn => {
-    btn.classList.remove('active');
-  });
+        <p class="venue-note" data-lang="en">
+          You may use the map below for directions and transport planning.
+        </p>
+        <p class="venue-note" data-lang="mm">
+          လာရောက်ရာလမ်းညွှန်နှင့် ယာဉ်စီစဉ်ရေးအတွက် အောက်ပါမြေပုံကို အသုံးပြုနိုင်ပါသည်။
+        </p>
+      </div>
 
-  if (lang === 'en') {
-    document.getElementById('en-btn').classList.add('active');
-  } else if (lang === 'mm') {
-    document.getElementById('mm-btn').classList.add('active');
-  }
-}
+      <div class="map-container">
+        <!-- Replace the src below with the real Google Maps embed URL for Sedona Hotel Yangon if you wish -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.676690653352!2d96.1500!3d16.7900!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSedona%20Hotel%20Yangon!5e0!3m2!1sen!2smm!4v1700000000000"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
 
-// Initialize the page in English and set the active button style
-switchLang('en');
-</script>
+    <!-- RSVP Section -->
+    <section class="section" id="rsvp">
+      <div class="section-header">
+        <h2 class="section-title" data-lang="en">RSVP</h2>
+        <h2 class="section-title" data-lang="mm">RSVP အကြောင်းပြန်ရန်</h2>
+      </div>
 
+      <div class="rsvp-center">
+        <p class="rsvp-text" data-lang="en">
+          We kindly request your response at your earliest convenience so we can plan
+          seating, meals, and arrangements for all of our loved ones.
+        </p>
+        <p class="rsvp-text" data-lang="mm">
+          မိမိတို့ မိဘမောင်နှမ မိတ်ဆွေတော်များအားလုံးအတွက် ထိုင်ခုံ၊ အစားအစာနှင့် အခြားစီစဉ်မှုများကို
+          အကောင်းဆုံးပြင်ဆင်နိုင်ရန် အကောင်းမြန်ဆုံး အကြောင်းပြန်ဖြည့်ပေးပါရန် မေတ္တာရပ်ခံအပ်ပါသည်။
+        </p>
+
+        <!-- Replace the href with your real Google Form / RSVP link -->
+        <a
+          href="https://example.com/your-rsvp-form"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary">
+          <span data-lang="en">Open RSVP Form</span>
+          <span data-lang="mm">RSVP ဖောင် ဖွင့်ရန်</span>
+          <span class="icon">📝</span>
+        </a>
+
+        <p class="muted" style="margin-top: 0.7rem;" data-lang="en">
+          If you have any dietary needs or special requests, please include them in your response.
+        </p>
+        <p class="muted" style="margin-top: 0.7rem;" data-lang="mm">
+          အစားအသောက် သက်တောင့်သက်သာမှု သို့မဟုတ် အထူးလိုအပ်ချက်များရှိပါက RSVP တွင် ပြောပြပေးနိုင်ပါသည်။
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p data-lang="en">
+        Thank you for being part of our journey. We look forward to celebrating with you on
+        10 November 2027 at Sedona Hotel Yangon.
+      </p>
+      <p data-lang="mm">
+        ကျွန်ုပ်တို့၏ ဘဝခရီးစဉ်အတွင်း ပါဝင်ကူညီပံ့ပိုးပေးခဲ့ကြသော မိဘမောင်နှမများ၊ မိတ်ဆွေသဂျူများအားလုံးကို
+        အထူးကျေးဇူးတင်ရှိနေပါသည်။ ၁၀ နိုဝင်ဘာ ၂၀၂၇ တွင် ဆီဒိုနာ ဟိုတယ် ရန်ကုန်၌ သင့်အလှပဲဖြင့်
+        တက်ရောက်အားဖြည့်ပေးဖို့ မျှော်လင့်နေပါတယ်။
+      </p>
+
+      <p style="margin-top: 0.9rem;">
+        <span data-lang="en">With love</span>
+        <span data-lang="mm">အချစ်နှင့်အတူ</span>
+        ·
+        <span class="heart">♥</span>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    // Language Switcher with persistence
+    function switchLang(lang) {
+      // Show / hide elements by data-lang
+      document.querySelectorAll("[data-lang]").forEach(function (el) {
+        el.style.display = (el.getAttribute("data-lang") === lang) ? "block" : "none";
+      });
+
+      // Button active state
+      document.querySelectorAll(".button").forEach(function (btn) {
+        btn.classList.remove("active");
+      });
+      if (lang === "en") {
+        document.getElementById("en-btn").classList.add("active");
+      } else if (lang === "mm") {
+        document.getElementById("mm-btn").classList.add("active");
+      }
+
+      // Save language preference
+      localStorage.setItem("weddingSiteLang", lang);
+    }
+
+    // Simple countdown timer to 10 November 2027 (Yangon time approximation)
+    function initCountdown() {
+      // Target date (midnight local). Adjust if you want a specific time.
+      var targetDate = new Date("2027-11-10T00:00:00");
+
+      function updateCountdown() {
+        var now = new Date();
+        var diff = targetDate - now;
+
+        var daysEl = document.getElementById("days");
+        var hoursEl = document.getElementById("hours");
+        var minutesEl = document.getElementById("minutes");
+        var secondsEl = document.getElementById("seconds");
+
+        if (diff <= 0) {
+          daysEl.textContent = "0";
+          hoursEl.textContent = "0";
+          minutesEl.textContent = "0";
+          secondsEl.textContent = "0";
+          return;
+        }
+
+        var seconds = Math.floor(diff / 1000);
+        var days = Math.floor(seconds / (60 * 60 * 24));
+        seconds -= days * 60 * 60 * 24;
+        var hours = Math.floor(seconds / (60 * 60));
+        seconds -= hours * 60 * 60;
+        var minutes = Math.floor(seconds / 60);
+        seconds -= minutes * 60;
+
+        daysEl.textContent = days;
+        hoursEl.textContent = hours;
+        minutesEl.textContent = minutes;
+        secondsEl.textContent = seconds;
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var savedLang = localStorage.getItem("weddingSiteLang") || "en";
+      switchLang(savedLang);
+      initCountdown();
+    });
+  </script>
 </body>
 </html>
