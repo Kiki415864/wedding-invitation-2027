@@ -10,6 +10,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
+    .rsvp-card {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 1.8rem 1.4rem;
+  background: #fff6f1;
+  border: 1px solid #f0ded6;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(180, 134, 108, 0.15);
+}
+
+.rsvp-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.rsvp-card input,
+.rsvp-card select,
+.rsvp-card textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #e3cbbf;
+  background: #ffffff;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.rsvp-card label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.success-message {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  background: #e6f7e6;
+  color: #2f5e2f;
+  border: 1px solid #a6d8a6;
+  text-align: center;
+  font-size: 0.95rem;
+}
     :root {
       --bg-main: #faf4ef;
       --bg-card: #ffffff;
@@ -361,6 +404,74 @@
     }
 
     /* RSVP Section */
+    <!-- RSVP Section -->
+<section class="section" id="rsvp">
+  <div class="section-header">
+    <h2 class="section-title" data-lang="en">RSVP</h2>
+    <h2 class="section-title" data-lang="mm">RSVP အကြောင်းပြန်ရန်</h2>
+  </div>
+
+  <div class="rsvp-card">
+    <form 
+      action="https://formspree.io/f/YOUR-ENDPOINT-HERE"
+      method="POST"
+      id="rsvpForm"
+    >
+
+      <!-- Full Name -->
+      <label data-lang="en">Full Name</label>
+      <label data-lang="mm">အမည်အပြည့်အစုံ</label>
+      <input type="text" name="name" required placeholder="Your Name">
+
+      <!-- Email -->
+      <label data-lang="en">Email</label>
+      <label data-lang="mm">အီးမေးလ်</label>
+      <input type="email" name="email" required placeholder="your@email.com">
+
+      <!-- Phone -->
+      <label data-lang="en">Phone Number</label>
+      <label data-lang="mm">ဖုန်းနံပါတ်</label>
+      <input type="text" name="phone" required placeholder="+95...">
+
+      <!-- Number of Guests -->
+      <label data-lang="en">Number of Guests</label>
+      <label data-lang="mm">တက်ရောက်မည့်ဧည့်သည်အရေအတွက်</label>
+      <select name="guests" required>
+        <option value="1">1 Guest</option>
+        <option value="2">2 Guests</option>
+        <option value="3">3 Guests</option>
+        <option value="4">4 Guests</option>
+      </select>
+
+      <!-- Attendance -->
+      <label data-lang="en">Will you attend?</label>
+      <label data-lang="mm">တက်ရောက်မည်/မတက်ရောက်မည်</label>
+      <select name="attendance" required>
+        <option value="yes">Yes, I will attend</option>
+        <option value="no">No, I cannot attend</option>
+      </select>
+
+      <!-- Message -->
+      <label data-lang="en">Special Requests (Optional)</label>
+      <label data-lang="mm">အထူးလိုအပ်ချက်များ (မဖြည့်လည်းရ)</label>
+      <textarea name="message" rows="4" placeholder="Message..."></textarea>
+
+      <!-- Submit -->
+      <button type="submit" class="btn-primary">
+        <span data-lang="en">Submit RSVP</span>
+        <span data-lang="mm">RSVP တင်သွင်းရန်</span>
+        <span class="icon">💌</span>
+      </button>
+
+      <!-- Success Message -->
+      <p class="success-message" id="rsvpSuccess" style="display:none;">
+        <span data-lang="en">Your RSVP has been sent. Thank you!</span>
+        <span data-lang="mm">သင့် RSVP တင်သွင်းပြီးပါပြီ။ ကျေးဇူးတင်ပါတယ်။</span>
+      </p>
+
+    </form>
+  </div>
+</section>
     .rsvp-center {
       text-align: center;
     }
@@ -678,6 +789,12 @@
   </div>
 
   <script>
+    // RSVP Success Handler
+document.getElementById("rsvpForm").addEventListener("submit", function(event) {
+  setTimeout(function() {
+    document.getElementById("rsvpSuccess").style.display = "block";
+  }, 800);
+});
     // Language Switcher with persistence
     function switchLang(lang) {
       // Show / hide elements by data-lang
