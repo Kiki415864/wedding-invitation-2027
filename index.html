@@ -1,58 +1,22 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Wedding Invitation – Mg Ye Thu Wai & Ma Vung San Nuam</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Wedding invitation for Mg Ye Thu Wai & Ma Vung San Nuam – 10 November 2027, Sedona Hotel Yangon." />
 
-  <!-- Google Fonts -->
+  <!-- SEO / Social -->
+  <meta name="description" content="Wedding invitation for Mg Ye Thu Wai & Ma Vung San Nuam – 10 November 2027, Sedona Hotel Yangon." />
+  <link rel="canonical" href="https://yethuwaiandnuam.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Wedding Invitation – Mg Ye Thu Wai & Ma Vung San Nuam" />
+  <meta property="og:description" content="Join us on 10 November 2027 at Sedona Hotel Yangon to celebrate our wedding." />
+  <meta property="og:url" content="https://yethuwaiandnuam.com" />
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    .rsvp-card {
-  max-width: 650px;
-  margin: 0 auto;
-  padding: 1.8rem 1.4rem;
-  background: #fff6f1;
-  border: 1px solid #f0ded6;
-  border-radius: 18px;
-  box-shadow: 0 6px 24px rgba(180, 134, 108, 0.15);
-}
-
-.rsvp-card form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-}
-
-.rsvp-card input,
-.rsvp-card select,
-.rsvp-card textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border-radius: 10px;
-  border: 1px solid #e3cbbf;
-  background: #ffffff;
-  font-size: 0.95rem;
-  color: var(--text-main);
-}
-
-.rsvp-card label {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-.success-message {
-  margin-top: 1rem;
-  padding: 0.8rem 1rem;
-  border-radius: 10px;
-  background: #e6f7e6;
-  color: #2f5e2f;
-  border: 1px solid #a6d8a6;
-  text-align: center;
-  font-size: 0.95rem;
-}
     :root {
       --bg-main: #faf4ef;
       --bg-card: #ffffff;
@@ -388,98 +352,88 @@
       margin-top: 0.4rem;
     }
 
+    .map-tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.85rem;
+    }
+
+    .map-tab {
+      flex: 1;
+      text-align: center;
+      padding: 0.4rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid #e8d6c7;
+      background: #fff7f2;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .map-tab.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      font-weight: 500;
+    }
+
     .map-container {
-      margin-top: 0.9rem;
       border-radius: 14px;
       overflow: hidden;
       border: 1px solid #eedfd2;
       box-shadow: 0 10px 30px rgba(173, 132, 104, 0.2);
     }
 
-    .map-container iframe {
-      display: block;
+    .map-frame {
+      display: none;
       width: 100%;
       height: 280px;
       border: none;
     }
 
-    /* RSVP Section */
-    <!-- RSVP Section -->
-<section class="section" id="rsvp">
-  <div class="section-header">
-    <h2 class="section-title" data-lang="en">RSVP</h2>
-    <h2 class="section-title" data-lang="mm">RSVP အကြောင်းပြန်ရန်</h2>
-  </div>
-
-  <div class="rsvp-card">
-    <form 
-      action="https://formspree.io/f/YOUR-ENDPOINT-HERE"
-      method="POST"
-      id="rsvpForm"
-    >
-
-      <!-- Full Name -->
-      <label data-lang="en">Full Name</label>
-      <label data-lang="mm">အမည်အပြည့်အစုံ</label>
-      <input type="text" name="name" required placeholder="Your Name">
-
-      <!-- Email -->
-      <label data-lang="en">Email</label>
-      <label data-lang="mm">အီးမေးလ်</label>
-      <input type="email" name="email" required placeholder="your@email.com">
-
-      <!-- Phone -->
-      <label data-lang="en">Phone Number</label>
-      <label data-lang="mm">ဖုန်းနံပါတ်</label>
-      <input type="text" name="phone" required placeholder="+95...">
-
-      <!-- Number of Guests -->
-      <label data-lang="en">Number of Guests</label>
-      <label data-lang="mm">တက်ရောက်မည့်ဧည့်သည်အရေအတွက်</label>
-      <select name="guests" required>
-        <option value="1">1 Guest</option>
-        <option value="2">2 Guests</option>
-        <option value="3">3 Guests</option>
-        <option value="4">4 Guests</option>
-      </select>
-
-      <!-- Attendance -->
-      <label data-lang="en">Will you attend?</label>
-      <label data-lang="mm">တက်ရောက်မည်/မတက်ရောက်မည်</label>
-      <select name="attendance" required>
-        <option value="yes">Yes, I will attend</option>
-        <option value="no">No, I cannot attend</option>
-      </select>
-
-      <!-- Message -->
-      <label data-lang="en">Special Requests (Optional)</label>
-      <label data-lang="mm">အထူးလိုအပ်ချက်များ (မဖြည့်လည်းရ)</label>
-      <textarea name="message" rows="4" placeholder="Message..."></textarea>
-
-      <!-- Submit -->
-      <button type="submit" class="btn-primary">
-        <span data-lang="en">Submit RSVP</span>
-        <span data-lang="mm">RSVP တင်သွင်းရန်</span>
-        <span class="icon">💌</span>
-      </button>
-
-      <!-- Success Message -->
-      <p class="success-message" id="rsvpSuccess" style="display:none;">
-        <span data-lang="en">Your RSVP has been sent. Thank you!</span>
-        <span data-lang="mm">သင့် RSVP တင်သွင်းပြီးပါပြီ။ ကျေးဇူးတင်ပါတယ်။</span>
-      </p>
-
-    </form>
-  </div>
-</section>
-    .rsvp-center {
-      text-align: center;
+    /* RSVP Section – Elegant Pastel Card */
+    .rsvp-card {
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 1.8rem 1.4rem;
+      background: #fff6f1;
+      border: 1px solid #f0ded6;
+      border-radius: 18px;
+      box-shadow: 0 6px 24px rgba(180, 134, 108, 0.15);
     }
 
-    .rsvp-text {
-      font-size: 0.96rem;
+    .rsvp-card form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .rsvp-card input,
+    .rsvp-card select,
+    .rsvp-card textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 10px;
+      border: 1px solid #e3cbbf;
+      background: #ffffff;
+      font-size: 0.95rem;
       color: var(--text-main);
-      margin-bottom: 1rem;
+    }
+
+    .rsvp-card label {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .success-message {
+      margin-top: 1rem;
+      padding: 0.8rem 1rem;
+      border-radius: 10px;
+      background: #e6f7e6;
+      color: #2f5e2f;
+      border: 1px solid #a6d8a6;
+      text-align: center;
+      font-size: 0.95rem;
     }
 
     /* Footer */
@@ -496,7 +450,7 @@
       color: #e08a8a;
     }
 
-    /* Language handling: default hidden, JS will show proper language */
+    /* Language handling: default hidden; JS will show relevant language */
     [data-lang] {
       display: none;
     }
@@ -604,7 +558,7 @@
           A simple beginning that grew into a lifetime journey.
         </p>
         <p class="section-subtitle" data-lang="mm">
-          ရိုးရှင်းသည့် အစတစ်ခုက ကျက်သရေပြည့် အချစ်လမ်းကြောင်းတစ်သွးဖြစ်လာပြန်သည်။
+          ရိုးရှင်းသည့် အစတစ်ခုက ကျက်သရေပြည့် အချစ်လမ်းကြောင်းတစ်သွေးဖြစ်လာပြန်သည်။
         </p>
       </div>
 
@@ -686,7 +640,7 @@
       </div>
     </section>
 
-    <!-- Venue & Map -->
+    <!-- Venue & Maps -->
     <section class="section" id="venue">
       <div class="section-header">
         <h2 class="section-title" data-lang="en">Venue</h2>
@@ -713,19 +667,34 @@
         </p>
 
         <p class="venue-note" data-lang="en">
-          You may use the map below for directions and transport planning.
+          Use either Google Maps or Apple Maps below for directions and transport planning.
         </p>
         <p class="venue-note" data-lang="mm">
-          လာရောက်ရာလမ်းညွှန်နှင့် ယာဉ်စီစဉ်ရေးအတွက် အောက်ပါမြေပုံကို အသုံးပြုနိုင်ပါသည်။
+          လာရောက်ရာလမ်းညွှန်နှင့် ယာဉ်စီစဉ်ရေးအတွက် အောက်ပါ Google မပ်နှင့် Apple မပ်တို့ကို အသုံးပြုနိုင်ပါသည်။
         </p>
       </div>
 
+      <div class="map-tabs">
+        <div class="map-tab active" id="tab-google" onclick="switchMap('google')">Google Maps</div>
+        <div class="map-tab" id="tab-apple" onclick="switchMap('apple')">Apple Maps</div>
+      </div>
+
       <div class="map-container">
-        <!-- Replace the src below with the real Google Maps embed URL for Sedona Hotel Yangon if you wish -->
+        <!-- Google Maps -->
         <iframe
+          id="map-google"
+          class="map-frame"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.676690653352!2d96.1500!3d16.7900!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSedona%20Hotel%20Yangon!5e0!3m2!1sen!2smm!4v1700000000000"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <!-- Apple Maps -->
+        <iframe
+          id="map-apple"
+          class="map-frame"
+          src="https://maps.apple.com/?q=Sedona%20Hotel%20Yangon&ll=16.8240,96.1570&z=16&t=m"
+          loading="lazy">
         </iframe>
       </div>
     </section>
@@ -737,33 +706,63 @@
         <h2 class="section-title" data-lang="mm">RSVP အကြောင်းပြန်ရန်</h2>
       </div>
 
-      <div class="rsvp-center">
-        <p class="rsvp-text" data-lang="en">
-          We kindly request your response at your earliest convenience so we can plan
-          seating, meals, and arrangements for all of our loved ones.
-        </p>
-        <p class="rsvp-text" data-lang="mm">
-          မိမိတို့ မိဘမောင်နှမ မိတ်ဆွေတော်များအားလုံးအတွက် ထိုင်ခုံ၊ အစားအစာနှင့် အခြားစီစဉ်မှုများကို
-          အကောင်းဆုံးပြင်ဆင်နိုင်ရန် အကောင်းမြန်ဆုံး အကြောင်းပြန်ဖြည့်ပေးပါရန် မေတ္တာရပ်ခံအပ်ပါသည်။
-        </p>
+      <div class="rsvp-card">
+        <form
+          action="https://formspree.io/f/mzzoqbye"
+          method="POST"
+          id="rsvpForm"
+        >
+          <!-- Full Name -->
+          <label data-lang="en">Full Name</label>
+          <label data-lang="mm">အမည်အပြည့်အစုံ</label>
+          <input type="text" name="name" required placeholder="Your Name" />
 
-        <!-- Replace the href with your real Google Form / RSVP link -->
-        <a
-          href="https://example.com/your-rsvp-form"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-primary">
-          <span data-lang="en">Open RSVP Form</span>
-          <span data-lang="mm">RSVP ဖောင် ဖွင့်ရန်</span>
-          <span class="icon">📝</span>
-        </a>
+          <!-- Email -->
+          <label data-lang="en">Email</label>
+          <label data-lang="mm">အီးမေးလ်</label>
+          <input type="email" name="email" required placeholder="your@email.com" />
 
-        <p class="muted" style="margin-top: 0.7rem;" data-lang="en">
-          If you have any dietary needs or special requests, please include them in your response.
-        </p>
-        <p class="muted" style="margin-top: 0.7rem;" data-lang="mm">
-          အစားအသောက် သက်တောင့်သက်သာမှု သို့မဟုတ် အထူးလိုအပ်ချက်များရှိပါက RSVP တွင် ပြောပြပေးနိုင်ပါသည်။
-        </p>
+          <!-- Phone -->
+          <label data-lang="en">Phone Number</label>
+          <label data-lang="mm">ဖုန်းနံပါတ်</label>
+          <input type="text" name="phone" required placeholder="+95..." />
+
+          <!-- Number of Guests -->
+          <label data-lang="en">Number of Guests</label>
+          <label data-lang="mm">တက်ရောက်မည့်ဧည့်သည်အရေအတွက်</label>
+          <select name="guests" required>
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+          </select>
+
+          <!-- Attendance -->
+          <label data-lang="en">Will you attend?</label>
+          <label data-lang="mm">တက်ရောက်မည်/မတက္ရောက်မည်</label>
+          <select name="attendance" required>
+            <option value="yes">Yes, I will attend</option>
+            <option value="no">No, I cannot attend</option>
+          </select>
+
+          <!-- Message -->
+          <label data-lang="en">Special Requests (Optional)</label>
+          <label data-lang="mm">အထူးလိုအပ်ချက်များ (မဖြည့်လည်းရ)</label>
+          <textarea name="message" rows="4" placeholder="Message..."></textarea>
+
+          <!-- Submit -->
+          <button type="submit" class="btn-primary">
+            <span data-lang="en">Submit RSVP</span>
+            <span data-lang="mm">RSVP တင်သွင်းရန်</span>
+            <span class="icon">💌</span>
+          </button>
+
+          <!-- Success Message -->
+          <p class="success-message" id="rsvpSuccess" style="display: none;">
+            <span data-lang="en">Your RSVP has been sent. Thank you!</span>
+            <span data-lang="mm">သင့် RSVP တင်သွင်းပြီးပါပြီ။ ကျေးဇူးတင်ပါတယ်။</span>
+          </p>
+        </form>
       </div>
     </section>
 
@@ -789,20 +788,12 @@
   </div>
 
   <script>
-    // RSVP Success Handler
-document.getElementById("rsvpForm").addEventListener("submit", function(event) {
-  setTimeout(function() {
-    document.getElementById("rsvpSuccess").style.display = "block";
-  }, 800);
-});
     // Language Switcher with persistence
     function switchLang(lang) {
-      // Show / hide elements by data-lang
       document.querySelectorAll("[data-lang]").forEach(function (el) {
         el.style.display = (el.getAttribute("data-lang") === lang) ? "block" : "none";
       });
 
-      // Button active state
       document.querySelectorAll(".button").forEach(function (btn) {
         btn.classList.remove("active");
       });
@@ -812,13 +803,11 @@ document.getElementById("rsvpForm").addEventListener("submit", function(event) {
         document.getElementById("mm-btn").classList.add("active");
       }
 
-      // Save language preference
       localStorage.setItem("weddingSiteLang", lang);
     }
 
-    // Simple countdown timer to 10 November 2027 (Yangon time approximation)
+    // Countdown timer to 10 November 2027
     function initCountdown() {
-      // Target date (midnight local). Adjust if you want a specific time.
       var targetDate = new Date("2027-11-10T00:00:00");
 
       function updateCountdown() {
@@ -856,11 +845,68 @@ document.getElementById("rsvpForm").addEventListener("submit", function(event) {
       setInterval(updateCountdown, 1000);
     }
 
+    // Map switcher (Google / Apple)
+    function switchMap(which) {
+      var gFrame = document.getElementById("map-google");
+      var aFrame = document.getElementById("map-apple");
+      var tabG = document.getElementById("tab-google");
+      var tabA = document.getElementById("tab-apple");
+
+      if (which === "google") {
+        gFrame.style.display = "block";
+        aFrame.style.display = "none";
+        tabG.classList.add("active");
+        tabA.classList.remove("active");
+      } else {
+        gFrame.style.display = "none";
+        aFrame.style.display = "block";
+        tabG.classList.remove("active");
+        tabA.classList.add("active");
+      }
+    }
+
+    // RSVP form submission via Formspree (AJAX)
+    function initRSVP() {
+      var form = document.getElementById("rsvpForm");
+      var success = document.getElementById("rsvpSuccess");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        success.style.display = "none";
+
+        var data = new FormData(form);
+
+        fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            "Accept": "application/json"
+          }
+        }).then(function (response) {
+          if (response.ok) {
+            form.reset();
+            success.style.display = "block";
+          } else {
+            success.style.display = "block";
+            success.textContent = "There was a problem sending your RSVP. Please try again.";
+          }
+        }).catch(function () {
+          success.style.display = "block";
+          success.textContent = "There was a problem sending your RSVP. Please try again.";
+        });
+      });
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
       var savedLang = localStorage.getItem("weddingSiteLang") || "en";
       switchLang(savedLang);
       initCountdown();
+      switchMap("google");
+      initRSVP();
     });
   </script>
 </body>
 </html>
+
+
+    
